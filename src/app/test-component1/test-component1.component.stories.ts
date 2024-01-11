@@ -12,7 +12,21 @@ export default meta;
 type Story = StoryObj<TestComponent1Component>;
 
 export const Primary: Story = {
-  args: {},
+  args: {
+    myArg: 'a sample value'
+  },
+  argTypes: {
+    myArg: {
+      type: 'string'
+    }
+  },
+  render: ({ ...args }) => ({
+    props: args,
+    template: `
+      <storybook-demo-test-component1></storybook-demo-test-component1>
+      <p>{{ myArg }}</p>
+`,
+  }),
 };
 
 export const Heading: Story = {
