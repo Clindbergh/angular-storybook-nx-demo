@@ -8,8 +8,15 @@ const meta: Meta<TestComponent1Component> = {
   component: TestComponent1Component,
   title: 'TestComponent1Component',
 };
+
+
+interface ExtraArgs {
+  myArg: string;
+}
+
 export default meta;
-type Story = StoryObj<TestComponent1Component>;
+type Story = StoryObj<TestComponent1Component & ExtraArgs>;
+
 
 export const Primary: Story = {
   args: {
