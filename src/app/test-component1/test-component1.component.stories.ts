@@ -13,6 +13,7 @@ type Story = StoryObj<TestComponent1Component>;
 
 export const Primary: Story = {
   args: {
+    myField: 'myField',
     myArg: 'a sample value'
   },
   argTypes: {
