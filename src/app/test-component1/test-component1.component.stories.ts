@@ -13,13 +13,20 @@ type Story = StoryObj<TestComponent1Component>;
 
 export const Primary: Story = {
   args: {
-    greeter: (name: string) => `Hi ${name}`
+    greeter: (name: string) => `Hi ${name}`,
   },
-  render: ({ ...args }) => ({
-    template: `
-      <storybook-demo-test-component1 [greeter]='greeter' />
-    `
-  })
+  // render: ({ ...args }) => ({
+  //   template: `
+  //     <storybook-demo-test-component1 [greeter]='greeter' />
+  //   `,
+  // }),
+  argTypes: {
+    greeter: {
+      control: {
+        type: 'function',
+      },
+    },
+  },
 };
 
 export const Heading: Story = {

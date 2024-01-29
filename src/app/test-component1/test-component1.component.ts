@@ -10,8 +10,6 @@ import { CommonModule } from '@angular/common';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TestComponent1Component {
-
-  @Input({ required: true})
-  greeter!:  (name:string) => string
-
+  @Input({ required: true })
+  greeter!: (name: string) => string;
 }
