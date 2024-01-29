@@ -12,7 +12,9 @@ export default meta;
 type Story = StoryObj<TestComponent1Component>;
 
 export const Primary: Story = {
-  args: {},
+  args: {
+    greeter: (name: string) => `Hi ${name}`
+  },
 };
 
 export const Heading: Story = {
