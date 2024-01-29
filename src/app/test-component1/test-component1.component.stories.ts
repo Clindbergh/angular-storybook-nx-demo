@@ -15,6 +15,11 @@ export const Primary: Story = {
   args: {
     greeter: (name: string) => `Hi ${name}`
   },
+  render: ({ ...args }) => ({
+    template: `
+      <storybook-demo-test-component1 [greeter]='greeter' />
+    `
+  })
 };
 
 export const Heading: Story = {
